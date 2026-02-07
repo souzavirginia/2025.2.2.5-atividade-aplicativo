@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <div id="loading-screen">
+            <img id="album-cover" src="imagens/logov2.png" alt="Album Cover" style="display: none;">
+        </div>
+
+        <div id="track-info">
+            <div id="track-title"></div>
+            <div id="track-artist"></div>
+        </div>
+
+        <div id="controller-section">
+            <!-- Adesivos -->
+            <img src="imagens/cherry.png" alt="" class="sticker sticker-top-left">
+            <img src="imagens/cat.png" alt="" class="sticker sticker-top-right">
+            <img src="imagens/dnd.png" alt="" class="sticker sticker-bottom-left">
+            <img src="imagens/strawberry.png" alt="" class="sticker sticker-bottom-right">
+
+            <div id="controller">
+                <!--- Círculo Central -->
+                <div class="center-circle">
+                    <img src="imagens/logov2.png" alt="Logo" class="logo">
+
+                    <!-- Controles no Círculo -->
+                    <div class="controls">
+                        <div class="control-left">
+                            <span class="control-label"></span>
+                            <button class="control-btn skip-back">
+                                <img src="imagens/rewind.png" alt="Skip Backward">
+                            </button>
+                        </div>
+
+                        <div class="control-bottom">
+                            <button class="control-btn play-pause">
+                                <img src="imagens/pause.png" alt="Play/Pause" class="play-pause-icon">
+                            </button>
+                        </div>
+
+                        <div class="control-right">
+                            <span class="control-label"></span>
+                            <button class="control-btn skip-forward">
+                                <img src="imagens/skip.png" alt="Skip Forward">
+                            </button>
+                        </div>
+
+                        <div class="control-top">
+                            <span class="control-label"></span>
+                            <button class="control-btn menu">
+                                <img src="imagens/MENU.png" alt="Menu">
+                            </button>
+                        </div>
+                    </div>
+                 </div>
+        </div> 
+        </div>
+
+    </div> 
+    <script src="app.js"></script>
+</body>
+</html>
