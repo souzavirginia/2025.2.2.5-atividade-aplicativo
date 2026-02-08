@@ -1,145 +1,115 @@
-/* Configurações Gerais */
-
-:root {
-    --bg-blue: #C2DAFF;     
-    --ipod-blue: #C8EFF6;     
-    --text-pink: #f4a7bc;
-    --wheel-white: #f9f9f9;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+@font-face {
+    font-family: "MyFont";
+    src: url("Pixellari.ttf");
 }
 
 body {
-    background-color: var(--bg-blue);
+    background-color: #fdf0f0;
+    font-family: "MyFont", sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    margin: 0;
 }
 
-/* Container Principal */
-
-#app {
-    background-color: var(--ipod-blue); 
-    width: 320px;
-    height: 560px;
-    border-radius: 45px;
-    padding: 25px;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+.widget-container {
+    background-color: #f2e3e7;
+    width: 350px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border: 1px solid #d1c1c5;
 }
 
-/* Tela */
-
-#loading-screen, #track-info {
-    background-color: white;
-    height: 220px;
-    border-radius: 20px;
+.header-mac {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    gap: 8px;
+    margin-bottom: 20px;
     align-items: center;
-    text-align: center;
-    padding: 15px;
 }
 
-#loading-screen h1 {
-    color: var(--text-pink);
-    font-size: 1.1rem;
-    line-height: 1.6;
+.dot { width: 12px; height: 12px; border-radius: 50%; }
+.red { background: #ff5f56; }
+.yellow { background: #ffbd2e; }
+.green { background: #27c93f; }
+.title { flex-grow: 1; text-align: center; margin: 0; font-weight: bold; color: #555; font-size: 0.9em; }
+
+.top-section { 
+    display: flex; 
+    justify-content: space-between; 
+    margin-bottom: 20px; 
+}
+
+.date-box {
+    background-color: #b8c187;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    min-width: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+    justify-content: center; 
+    text-align: center;
+}
+
+.date-box p {
+    margin: 2px 0;
+    font-weight: bold;
+    width: 100%;
+}
+
+.date-box p { margin: 2px 0; font-weight: bold; }
+#dayNumber { font-size: 1.5em; }
+
+.progress-section { flex-grow: 1; margin-left: 20px;  text-align: center }
+
+.progress-bar {
+    background: #d1d1d1;
+    height: 12px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 5px 0;
+}
+
+.progress-fill {
+    background: #b8c187;
+    width: 0%;
+    height: 100%;
+    transition: width 0.3s;
+}
+
+
+.input-section { display: flex; gap: 10px; margin-bottom: 20px; }
+input {
+    flex-grow: 1;
+    padding: 8px;
+    border-radius: 20px;
+    border: 1px solid #b8c187;
+    outline: none;
+}
+
+button#addBtn {
+    background-color: #e57381;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
     font-weight: bold;
 }
 
-/* Nome da Música */
-
-#track-info {
-    margin-top: 15px;
-    height: 55px; 
-    border-radius: 25px;
-    box-shadow: inset 0 2px 5px rgba(0,0,0,0.05);
-}
-
-/* Controles */
-
-#controller-section {
-    flex-grow: 1;
+.task {
+    background-color: #b8c187;
     display: flex;
-    justify-content: center;
     align-items: center;
-    position: relative;
+    padding: 10px;
+    border-radius: 15px;
+    margin-bottom: 8px;
+    color: white;
 }
 
-#controller {
-    width: 200px;
-    height: 200px;
-    background-color: var(--wheel-white);
-    border-radius: 50%;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-}
-
-/* Círculo */
-
-.center-circle {
-    width: 75px;
-    height: 75px;
-    background-color: #A8E1EA;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 2;
-    cursor: pointer;
-}
-
-.logo {
-    width: 40px;
-}
-
-/* Controles do Círculo */
-
-.control-btn {
-    background: none;
-    border: none;
-    cursor: pointer;
-    position: absolute;
-    transition: transform 0.1s ease;
-}
-
-.control-btn:active {
-    transform: scale(0.9);
-}
-
-.control-btn img {
-    width: 26px;
-    opacity: 0.7; 
-}
-
-.control-top { position: absolute; top: 15px; }
-.control-bottom { position: absolute; bottom: 15px; }
-.control-left { position: absolute; left: 15px; }
-.control-right { position: absolute; right: 15px; }
-
-/* Adesivos */
-
-.sticker {
-    position: absolute;
-    width: 65px;
-    z-index: 3;
-    filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.1));
-}
-
-.sticker-top-left { top: -15px; left: -10px; transform: rotate(-10deg); }
-.sticker-top-right { top: -15px; right: -10px; transform: rotate(10deg); }
-.sticker-bottom-left { bottom: 0px; left: -15px; }
-.sticker-bottom-right { bottom: 0px; right: -15px; }
+.taskText { flex-grow: 1; margin: 0 10px; }
+.removeBtn { background: transparent; border: none; cursor: pointer; color: #e57381; font-weight: bold; font-size: 1.2em; }

@@ -1,68 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Music Player</title>
+    <title>Lista de Tarefas</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="app">
-        <div id="loading-screen">
-            <img id="album-cover" src="imagens/logov2.png" alt="Album Cover" style="display: none;">
+    <div class="widget-container">
+        <div class="header-mac">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+            <p class="title">Lista de Tarefas</p>
         </div>
 
-        <div id="track-info">
-            <div id="track-title"></div>
-            <div id="track-artist"></div>
+        <div class="top-section">
+            <div class="date-box">
+                <p id="dayName"></p>
+                <p id="dayNumber"></p>
+                <p id="monthName"></p>
+            </div>
+            <div class="progress-section">
+                <h3>Progresso:</h3>
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+                <p id="progress-label">0 / 0 tarefas feitas</p>
+            </div>
         </div>
 
-        <div id="controller-section">
-            <!-- Adesivos -->
-            <img src="imagens/cherry.png" alt="" class="sticker sticker-top-left">
-            <img src="imagens/cat.png" alt="" class="sticker sticker-top-right">
-            <img src="imagens/dnd.png" alt="" class="sticker sticker-bottom-left">
-            <img src="imagens/strawberry.png" alt="" class="sticker sticker-bottom-right">
-
-            <div id="controller">
-                <!--- Círculo Central -->
-                <div class="center-circle">
-                    <img src="imagens/logov2.png" alt="Logo" class="logo">
-
-                    <!-- Controles no Círculo -->
-                    <div class="controls">
-                        <div class="control-left">
-                            <span class="control-label"></span>
-                            <button class="control-btn skip-back">
-                                <img src="imagens/rewind.png" alt="Skip Backward">
-                            </button>
-                        </div>
-
-                        <div class="control-bottom">
-                            <button class="control-btn play-pause">
-                                <img src="imagens/pause.png" alt="Play/Pause" class="play-pause-icon">
-                            </button>
-                        </div>
-
-                        <div class="control-right">
-                            <span class="control-label"></span>
-                            <button class="control-btn skip-forward">
-                                <img src="imagens/skip.png" alt="Skip Forward">
-                            </button>
-                        </div>
-
-                        <div class="control-top">
-                            <span class="control-label"></span>
-                            <button class="control-btn menu">
-                                <img src="imagens/MENU.png" alt="Menu">
-                            </button>
-                        </div>
-                    </div>
-                 </div>
-        </div> 
+        <div class="input-section">
+            <input type="text" id="newTask" placeholder="Coloque sua tarefa!">
+            <button id="addBtn">Adicionar</button>
         </div>
 
-    </div> 
-    <script src="app.js"></script>
+        <h3>Minhas tarefas:</h3>
+        <div id="tasks-container">
+            </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
