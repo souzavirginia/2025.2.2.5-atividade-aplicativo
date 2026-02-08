@@ -13,6 +13,13 @@ body {
     margin: 0;
 }
 
+h3 {
+    color: #fe708e;
+    font-family: "MyFont", sans-serif;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
 .widget-container {
     background-color: #f2e3e7;
     width: 350px;
@@ -22,18 +29,46 @@ body {
     border: 1px solid #d1c1c5;
 }
 
+
 .header-mac {
+    background-color: white; 
     display: flex;
-    gap: 8px;
-    margin-bottom: 20px;
     align-items: center;
+    padding: 8px 15px;
+    border-radius: 15px 15px 0 0; 
+    border-bottom: 1px solid #d1c1c5; 
+    position: relative;
+    margin: -20px -20px 20px -20px;
+    gap: 8px;
 }
 
-.dot { width: 12px; height: 12px; border-radius: 50%; }
+.dots-container {
+    display: flex;
+    gap: 6px;
+    position: absolute;
+    left: 15px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.title {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    font-family: "MyFont", sans-serif;
+    color: #fe708e;
+    font-weight: bold;
+    font-size: 14px;
+}
+
 .red { background: #ff5f56; }
 .yellow { background: #ffbd2e; }
 .green { background: #27c93f; }
-.title { flex-grow: 1; text-align: center; margin: 0; font-weight: bold; color: #555; font-size: 0.9em; }
+
 
 .top-section { 
     display: flex; 
@@ -61,10 +96,18 @@ body {
     width: 100%;
 }
 
-.date-box p { margin: 2px 0; font-weight: bold; }
+.date-box p { 
+    margin: 2px 0;
+    font-weight: bold; 
+}
+
 #dayNumber { font-size: 1.5em; }
 
-.progress-section { flex-grow: 1; margin-left: 20px;  text-align: center }
+.progress-section {
+    flex-grow: 1; 
+    margin-left: 20px;  
+    text-align: center 
+}
 
 .progress-bar {
     background: #d1d1d1;
@@ -81,8 +124,21 @@ body {
     transition: width 0.3s;
 }
 
+#progress-label {
+    margin-top: 5px;
+    font-family: "MyFont", sans-serif;
+    font-size: 14px;
+    color: #fe708e;
+    text-align: center;
+    display: block; 
+}
 
-.input-section { display: flex; gap: 10px; margin-bottom: 20px; }
+.input-section { 
+    display: flex;
+    gap: 10px; 
+    margin-bottom: 20px; 
+}
+
 input {
     flex-grow: 1;
     padding: 8px;
@@ -104,12 +160,30 @@ button#addBtn {
 .task {
     background-color: #b8c187;
     display: flex;
-    align-items: center;
-    padding: 10px;
-    border-radius: 15px;
-    margin-bottom: 8px;
+    align-items: center; 
+    justify-content: flex-start; 
+    padding: 10px 15px;
+    border-radius: 20px;
+    width: 90%;
+    margin: 5px auto;
     color: white;
 }
 
-.taskText { flex-grow: 1; margin: 0 10px; }
-.removeBtn { background: transparent; border: none; cursor: pointer; color: #e57381; font-weight: bold; font-size: 1.2em; }
+.title {
+    color: #fccb63;
+    font-weight: bold;
+}
+
+.taskText { 
+    flex-grow: 1; 
+    margin: 0 10px; 
+}
+
+.removeBtn { 
+    background: transparent;
+    border: none; 
+    cursor: pointer; 
+    color: #e57381; 
+    font-weight: bold; 
+    font-size: 1.2em; 
+}

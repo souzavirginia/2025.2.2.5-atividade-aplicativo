@@ -10,9 +10,9 @@
 - [x] Criar e conectar um projeto no vercel ao repositório github
 - [x] Escolha um tema para aplicativo
 - [x] Construa o HTML + CSS estático
-- [ ] Pegue o HTML estático correspondente ao dado dinâmico e crie um json no js
-- [ ] Crie as funções de gerenciamento do dado (CRUD - create, retrieve, update, delete)
-- [ ] Conecte ao repositório (interno ou externo)
+- [x] Pegue o HTML estático correspondente ao dado dinâmico e crie um json no js
+- [x] Crie as funções de gerenciamento do dado (CRUD - create, retrieve, update, delete)
+- [x] Conecte ao repositório (interno ou externo)
 
 ## Temas de Aplicativos Web Simples para Iniciantes
 
